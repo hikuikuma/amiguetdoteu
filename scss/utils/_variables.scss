@@ -1,0 +1,15 @@
+$white: #FFFFFF;
+$white-50: #FFFFFF7F;
+$black: #130D15;
+$gray: #3b363d;
+$light-gray: #68636a;
+
+$primary: $black;
+$secondary: $gray;
+$highlight: #7a3292;
+$main-background: $white;
+
+$wp-admin-bar: var(--wp-admin--admin-bar--height, '0px');
+
+$site-margin: 12vw;
+$site-width: calc( 100vw - calc( 2 * $site-margin ) );

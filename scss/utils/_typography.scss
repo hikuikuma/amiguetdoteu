@@ -1,0 +1,51 @@
+// Fonts variables
+$urbanist: "Urbanist", sans-serif;
+$tiny-text-size: 0.688rem;
+
+html {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: 3rem 0 2rem;
+  &.smaller {
+    font-size: 1.25rem;
+    margin: 0.75rem 0 0.5rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+p {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $light-gray;
+  }
+  &:active, .active {
+    color: $highlight;
+  }
+}

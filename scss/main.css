@@ -1,0 +1,168 @@
+html {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: 3rem 0 2rem;
+}
+h2.smaller {
+  font-size: 1.25rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+p {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #68636a;
+}
+a:active, a .active {
+  color: #7a3292;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.site-width-content {
+  width: 76vw;
+  margin: 0 12vw;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0 1rem;
+}
+.menu-item {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.menu-footer {
+  flex-direction: column;
+}
+.menu-footer > .menu-item > a {
+  color: rgba(255, 255, 255, 0.4980392157);
+}
+.menu-footer > .menu-item > a:hover {
+  color: #130D15;
+}
+
+.navbar {
+  line-height: 40px;
+  margin: auto 0;
+}
+
+.site-header {
+  width: 100%;
+}
+.site-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 12vw;
+  width: 76vw;
+  height: 100px;
+}
+.site-header__content__logo {
+  display: inline-block;
+  aspect-ratio: 1054/324;
+  height: 60px;
+  margin: 20px;
+  background-image: url("../assets/images/logo.webp");
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+.site-identity {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 5px 30px 20px 5px;
+  grid-template-areas: "logo ." "logo title" "logo description" "logo .";
+  gap: 0 7px;
+  align-items: start;
+}
+.site-identity__logo {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/logo.webp");
+  background-size: 100% auto;
+  grid-area: logo;
+}
+.site-identity__title {
+  font: 700 1.875rem/30px "Urbanist", sans-serif;
+  align-self: flex-start;
+  grid-area: title;
+}
+.site-identity__description {
+  font: 700 0.688rem "Urbanist", sans-serif;
+  color: #3b363d;
+  text-transform: uppercase;
+  align-self: flex-end;
+  grid-area: description;
+}
+
+.site-footer {
+  width: 100%;
+  background-color: #68636a;
+  color: #FFFFFF;
+  padding: 1.5vw 0;
+}
+.site-footer__grid {
+  display: grid;
+  width: 76vw;
+  margin: 0 12vw;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "infos nav1 nav2" "legal nav3 nav3";
+}
+.site-footer__infos {
+  grid-area: infos;
+}
+.site-footer__legal {
+  grid-area: legal;
+  font-size: 0.688rem;
+}
+.site-footer__nav-projects {
+  grid-area: nav1;
+}
+.site-footer__nav-contact {
+  grid-area: nav2;
+}
+.site-footer__nav-legal {
+  grid-area: nav3;
+}
+
+/*# sourceMappingURL=main.css.map */

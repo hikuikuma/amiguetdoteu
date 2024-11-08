@@ -1,0 +1,38 @@
+.site-footer {
+  width: 100%;
+  background-color: $light-gray;
+  color: $white;
+  padding: calc($site-margin / 8) 0;
+
+  &__grid {
+    display: grid;
+    width: $site-width;
+    margin: 0 $site-margin;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "infos nav1 nav2"
+      "legal nav3 nav3";
+  }
+
+  &__infos {
+    grid-area: infos;
+  }
+
+  &__legal {
+    grid-area: legal;
+    font-size: $tiny-text-size;
+  }
+
+  &__nav {
+    &-projects {
+      grid-area: nav1;
+    }
+    &-contact {
+      grid-area: nav2;
+    }
+    &-legal {
+      grid-area: nav3;
+    }
+  }
+}

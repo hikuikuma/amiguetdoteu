@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0 1rem;
+
+  &-item {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &-footer {
+    flex-direction: column;
+    & > .menu-item {
+      & > a {
+        color: $white-50;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  line-height: 40px;
+  margin: auto 0;
+}
