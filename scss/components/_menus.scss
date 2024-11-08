@@ -13,6 +13,7 @@
   &-footer {
     flex-direction: column;
     & > .menu-item {
+      margin: 0.25rem 0;
       & > a {
         color: $white-50;
         &:hover {
