@@ -1,22 +1,32 @@
 .site-footer {
-  width: 100%;
+  width: $site-width;
+  margin: 3rem $site-margin 0;
   background-color: $light-gray;
   color: $white;
   padding: calc($site-margin / 8) 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  @media (max-width: $break-tablet) {
+    width: 100%;
+    border-radius: 0;
+  }
 
   &__grid {
     display: grid;
-    width: $site-width;
+    width: 100%;
+    max-width: $site-width;
     margin: 0 $site-margin;
+    padding: 1rem 2.5rem 1.75rem;
     grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1rem;
     grid-template-areas:
       "infos nav1 nav2"
       "legal nav3 nav3";
+    box-sizing: border-box;
   }
 
   &__infos {
     grid-area: infos;
+    padding-bottom: 2.5rem;
   }
 
   &__legal {
@@ -25,14 +35,18 @@
   }
 
   &__nav {
+    &-*{text-align: right;}
     &-projects {
       grid-area: nav1;
+      text-align: right;
     }
     &-contact {
       grid-area: nav2;
+      text-align: right;
     }
     &-legal {
       grid-area: nav3;
+      text-align: right;
     }
   }
 }

@@ -9,6 +9,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="site-pre-header">
+    <a href="" class="small">Mon CV</a>
+    <a href="<?= site_url().'/contact'; ?>" class="cta small">Me contacter</a>
+</div>
 <header class="site-header">
     <div class="site-header__content">
         <a href="<?= get_option('home'); ?>" class="site-identity">

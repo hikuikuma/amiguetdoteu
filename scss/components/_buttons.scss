@@ -1,0 +1,26 @@
+.tag {
+  display: inline-block;
+  &__filter {
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid $gray;
+    transition: all ease 0.2s;
+    background-color: $white;
+    cursor: pointer;
+    &.active {
+      background-color: $highlight;
+      border-color: $highlight;
+      color: $white;
+      &:hover {
+        border-color: $highlight;
+      }
+    }
+    &:hover {
+      background-color: $gray;
+      border-color: $gray;
+      color: $white;
+    }
+  }
+}

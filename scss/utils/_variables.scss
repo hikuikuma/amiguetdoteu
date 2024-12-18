@@ -1,5 +1,9 @@
+$break-tablet: 1200px;
+$break-mobile: 768px;
+
 $white: #FFFFFF;
 $white-50: #FFFFFF7F;
+$white-75: #FFFFFFBF;
 $black: #130D15;
 $gray: #3b363d;
 $light-gray: #68636a;
@@ -9,7 +13,22 @@ $secondary: $gray;
 $highlight: #7a3292;
 $main-background: $white;
 
+$default-box-shadow: 0 .25rem 1rem -.25rem rgba(44, 44, 44, 0.17);
+$thumbnail-box-shadow: 0 0 1rem 0 rgba(44, 44, 44, 0.17);
+
 $wp-admin-bar: var(--wp-admin--admin-bar--height, '0px');
 
-$site-margin: 12vw;
-$site-width: calc( 100vw - calc( 2 * $site-margin ) );
+$site-margin: auto;
+
+
+:root {
+  --site-width: min(calc( 100vw - calc( 2 * 12vw ) ), 87.5rem);
+}
+
+@media (max-width: $break-tablet) {
+  :root {
+    --site-width: 100%;
+  }
+}
+
+$site-width: var(--site-width);

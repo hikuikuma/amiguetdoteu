@@ -1,0 +1,22 @@
+@mixin load-dot($delay) {
+  animation-name: load-dot;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-delay: $delay;
+}
+
+@keyframes load-dot {
+  0% {
+    aspect-ratio: 1 / 1;
+  }
+
+  50% {
+    aspect-ratio: 1 / 4;
+  }
+
+  100% {
+    aspect-ratio: 1 / 1;
+  }
+}

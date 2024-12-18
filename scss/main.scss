@@ -1,9 +1,14 @@
 @import "utils/variables";
 @import "utils/typography";
+@import "utils/mixins";
 
 @import "base/normalize";
 
 @import "components/menus";
+@import "components/buttons";
 
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/projets";
+
+@import "pages/home";
