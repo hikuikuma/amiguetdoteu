@@ -926,11 +926,21 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 5%;
+  gap: 2rem 5%;
+}
+@media (max-width: 1200px) {
+  .mentions {
+    flex-direction: column;
+  }
 }
 .mentions__item {
   display: inline-block;
   width: 45%;
+}
+@media (max-width: 1200px) {
+  .mentions__item {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
