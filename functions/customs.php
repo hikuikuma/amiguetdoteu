@@ -44,3 +44,23 @@ function get_project_expertises($projectID) {
 function get_project_expertises_list($projectID) {
 	return implode(', ', wp_list_pluck(get_project_expertises($projectID)[0] , 'name' ));
 }
+
+function get_french_date($date) {
+	$year = substr($date, 0, 4);
+	$month = substr($date, 4, 2);
+	switch ($month) {
+		case '01': $month = 'Janvier'; break;
+		case '02': $month = 'Février'; break;
+		case '03': $month = 'Mars'; break;
+		case '04': $month = 'Avril'; break;
+		case '05': $month = 'Mai'; break;
+		case '06': $month = 'Juin'; break;
+		case '07': $month = 'Juillet'; break;
+		case '08': $month = 'Août'; break;
+		case '09': $month = 'Septembre'; break;
+		case '10': $month = 'Octobre'; break;
+		case '11': $month = 'Novembre'; break;
+		case '12': $month = 'Décembre'; break;
+	}
+	return $month . ' ' . $year;
+}

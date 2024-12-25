@@ -1,13 +1,24 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: calc(100% - $wp-admin-bar);
+  height: calc(100% - variables.$wp-admin-bar);
 }
 
 .site-width-content {
-  width: $site-width;
-  margin: 0 $site-margin;
+  width: variables.$site-width;
+  margin: 0 variables.$site-margin;
+}
+
+.site-content {
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  @media (max-width: variables.$break-tablet) {
+    margin-top: 100px;
+  }
 }
 
 .load-screen {
@@ -16,7 +27,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $white-50;
+  background-color: variables.$white-50;
   visibility: hidden;
 
   &__loader {
@@ -35,15 +46,15 @@ html, body {
     width: 1vw;
     aspect-ratio: 1;
     border-radius: .5vw;
-    background-color: $highlight;
-    &.dot1 {@include load-dot(0s);}
-    &.dot2 {@include load-dot(0.5s);}
-    &.dot3 {@include load-dot(1s);}
-    &.dot4 {@include load-dot(1.5s);}
-    &.dot5 {@include load-dot(2s);}
-    &.dot6 {@include load-dot(2.5s);}
-    &.dot7 {@include load-dot(3s);}
-    &.dot8 {@include load-dot(3.5s);}
+    background-color: variables.$highlight;
+    &.dot1 {@include mixins.load-dot(0s);}
+    &.dot2 {@include mixins.load-dot(0.5s);}
+    &.dot3 {@include mixins.load-dot(1s);}
+    &.dot4 {@include mixins.load-dot(1.5s);}
+    &.dot5 {@include mixins.load-dot(2s);}
+    &.dot6 {@include mixins.load-dot(2.5s);}
+    &.dot7 {@include mixins.load-dot(3s);}
+    &.dot8 {@include mixins.load-dot(3.5s);}
   }
 
   &.loading {

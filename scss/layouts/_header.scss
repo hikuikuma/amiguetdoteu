@@ -1,29 +1,35 @@
+@use "../utils/typography";
+@use "../utils/variables";
+
 .site-pre-header {
   position: relative;
-  width: $site-width;
-  margin: 0 $site-margin;
+  width: variables.$site-width;
+  margin: 0 variables.$site-margin;
   height: 3rem;
   line-height: 1rem;
   padding: 1rem 2.5rem;
   box-sizing: border-box;
   text-align: right;
-  @media (max-width: $break-tablet) {
-    display: none;
+  @media (max-width: variables.$break-tablet) {
+    position: fixed;
+    top: variables.$wp-admin-bar;
+    padding: 0 2.5rem;
+    z-index: 150;
   }
 }
 
 .site-header {
   position: relative;
-  width: $site-width;
-  margin: 0 $site-margin -50px;
-  box-shadow: $default-box-shadow;
-  background-color: $white;
+  width: variables.$site-width;
+  margin: 0 variables.$site-margin -50px;
+  box-shadow: variables.$default-box-shadow;
+  background-color: variables.$white;
   border-radius: 0.5rem;
   z-index: 100;
   transition: width ease 0.2s, border-radius ease 0.2s;
-  @media (max-width: $break-tablet) {
+  @media (max-width: variables.$break-tablet) {
     position: fixed;
-    top: 0;
+    top: variables.$wp-admin-bar;
     width: 100%;
     border-radius: 0;
   }
@@ -35,7 +41,7 @@
     padding: 0 2.5rem;
     margin: 0 auto;
     width: 100%;
-    max-width: $site-width;
+    max-width: variables.$site-width;
     box-sizing: border-box;
     height: 100px;
 
@@ -52,7 +58,7 @@
 
   &.sticky {
     position: fixed;
-    top: $wp-admin-bar;
+    top: variables.$wp-admin-bar;
     width: 100%;
     border-radius: 0;
   }
@@ -79,13 +85,13 @@
     grid-area: logo;
   }
   &__title {
-    font: 700 1.875rem/30px $urbanist;
+    font: 700 1.875rem/30px typography.$urbanist;
     align-self: flex-start;
     grid-area: title;
   }
   &__description {
-    font: 700 $tiny-text-size $urbanist;
-    color: $gray;
+    font: 700 typography.$tiny-text-size typography.$urbanist;
+    color: variables.$gray;
     text-transform: uppercase;
     align-self: flex-end;
     grid-area: description;

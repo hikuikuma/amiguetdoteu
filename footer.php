@@ -21,17 +21,14 @@
             <h2 class="menu-title smaller">Contributions</h2>
             <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer', 'container' => false, 'theme_location' => 'footer-open' ) ); ?>
         </div>
-
         <div class="site-footer__nav-contact">
             <h2 class="menu-title smaller">Réseautage</h2>
 	        <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer', 'container' => false, 'theme_location' => 'footer-social' ) ); ?>
         </div>
-
-
         <div class="site-footer__legal">
 			<p>Tous droits réservés 2024 <?php if(date('Y') > 2024) echo '- '.date('Y'); ?></p>
+	        <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer','container_class' => 'site-footer__nav-legal', 'theme_location' => 'footer-legal' ) ); ?>
         </div>
-	    <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer','container_class' => 'site-footer__nav-legal', 'theme_location' => 'footer-legal' ) ); ?>
     </div>
 </footer>
 

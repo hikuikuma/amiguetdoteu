@@ -1,0 +1,10 @@
+.mentions {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5%;
+  &__item {
+    display: inline-block;
+    width: 45%;
+  }
+}

@@ -1,7 +1,9 @@
+@use "../utils/variables";
+
 .hero-header {
   margin: 0 auto;
   width: min(calc(1400px + 5rem), 100%);
   border-radius: 1rem;
-  background-color: $highlight;
+  background-color: variables.$highlight;
   aspect-ratio: 21/9;
 }

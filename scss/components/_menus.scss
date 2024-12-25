@@ -1,9 +1,11 @@
+@use "../utils/variables";
+
 .menu {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0 1rem;
+  gap: 0 2rem;
 
   &-item {
     font-weight: 600;
@@ -15,9 +17,9 @@
     & > .menu-item {
       margin: 0.25rem 0;
       & > a {
-        color: $white-50;
+        color: variables.$white-50;
         &:hover {
-          color: $white;
+          color: variables.$white;
         }
       }
     }

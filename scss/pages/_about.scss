@@ -1,0 +1,87 @@
+@use "../utils/variables";
+
+.timeline {
+
+  &-entry {
+    display: grid;
+    grid-template-columns: calc(calc(100% - 100px) / 2) 60px calc(calc(100% - 100px) / 2) !important;
+    grid-gap: 0 20px;
+
+
+    &__left {
+      grid-column: 1 / span 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+    }
+
+    &__dot {
+      grid-column: 2 / span 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 50%;
+        left: calc(50% - 8px);
+        background-color: variables.$highlight;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        top: 50%;
+      }
+    }
+
+    &__right {
+      grid-column: 3 / span 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    &__society {
+
+    }
+
+    &__poste-title {
+      font-weight: 600;
+    }
+
+    &__list {
+      margin: 0.5rem 0;
+    }
+
+    &:first-child > .timeline-entry__dot:before {
+      display: none;
+    }
+    &:last-child > .timeline-entry__dot:after {
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(122,50,146,1) 40%, rgba(122,50,146,1) 100%);
+    }
+  }
+  &-dot {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: variables.$highlight;
+    z-index: 10;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: variables.$white;
+    }
+  }
+}

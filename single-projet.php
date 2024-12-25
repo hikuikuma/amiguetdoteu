@@ -11,7 +11,7 @@
                 <h2 class="projet__subtitle">Projet en bref</h2>
                 <div class="projet__content">
                     <div class="projet__content__bref">
-                        <?= get_field('en_bref'); ?>
+                        <?php echo sprintf('<p>%s</p>', get_field('en_bref')); ?>
                     </div>
                     <div class="projet__content__infos">
                         <?php
@@ -31,6 +31,7 @@
                         ?>
                         <span class="projet__infos__label">Année</span><span class="projet__infos__value"><?= get_the_date('Y'); ?></span>
                         <span class="projet__infos__label"><?= get_tax_label('expertise', $post->ID); ?></span><span class="projet__infos__value"><?= get_project_expertises_list($post->ID); ?></span>
+                        <?php if(get_field('url_project') !== "") echo sprintf('<span class="projet__infos__meta"><a href="%s" target="_blank" class="link__out">Voir la réalisation</a></span>',get_field('url_project')); ?>
                     </div>
                 </div>
                 <div class="projet__thumbnail">

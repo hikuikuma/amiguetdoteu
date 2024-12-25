@@ -1,14 +1,16 @@
-@import "utils/variables";
-@import "utils/typography";
-@import "utils/mixins";
+@use "utils/variables";
+@use "utils/typography";
+@use "utils/mixins";
 
-@import "base/normalize";
+@use "base/normalize";
 
-@import "components/menus";
-@import "components/buttons";
+@use "components/menus";
+@use "components/buttons";
 
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/projets";
+@use "layouts/header";
+@use "layouts/footer";
+@use "layouts/projets";
 
-@import "pages/home";
+@use "pages/home";
+@use "pages/about";
+@use "pages/mentions";

@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .tag {
   display: inline-block;
   &__filter {
@@ -5,22 +7,22 @@
     padding: 0.5rem 1rem;
     margin: 0 0.25rem;
     border-radius: 1.25rem;
-    border: 1px solid $gray;
+    border: 1px solid variables.$gray;
     transition: all ease 0.2s;
-    background-color: $white;
+    background-color: variables.$white;
     cursor: pointer;
     &.active {
-      background-color: $highlight;
-      border-color: $highlight;
-      color: $white;
+      background-color: variables.$highlight;
+      border-color: variables.$highlight;
+      color: variables.$white;
       &:hover {
-        border-color: $highlight;
+        border-color: variables.$highlight;
       }
     }
     &:hover {
-      background-color: $gray;
-      border-color: $gray;
-      color: $white;
+      background-color: variables.$gray;
+      border-color: variables.$gray;
+      color: variables.$white;
     }
   }
 }

@@ -10,8 +10,7 @@
 
 <body <?php body_class(); ?>>
 <div class="site-pre-header">
-    <a href="" class="small">Mon CV</a>
-    <a href="<?= site_url().'/contact'; ?>" class="cta small">Me contacter</a>
+    <a href="<?= site_url().'/contact'; ?>" class="cta small">Contact</a>
 </div>
 <header class="site-header">
     <div class="site-header__content">
