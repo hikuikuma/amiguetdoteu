@@ -55,6 +55,9 @@
       display: inline-block;
       grid-area: legal;
       font-size: typography.$tiny-text-size;
+      & > .menu {
+        flex-direction: row !important;
+      }
     }
   }
 }

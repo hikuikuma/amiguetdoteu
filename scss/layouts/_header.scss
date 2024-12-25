@@ -11,10 +11,7 @@
   box-sizing: border-box;
   text-align: right;
   @media (max-width: variables.$break-tablet) {
-    position: fixed;
-    top: variables.$wp-admin-bar;
-    padding: 0 2.5rem;
-    z-index: 150;
+    display: none;
   }
 }
 

@@ -2,15 +2,19 @@ $break-tablet: 1200px;
 $break-mobile: 600px;
 
 $white: #FFFFFF;
-$white-50: #FFFFFF7F;
 $white-75: #FFFFFFBF;
+$white-50: #FFFFFF7F;
 $black: #130D15;
+$black-50: #130D157F;
 $gray: #3b363d;
 $light-gray: #68636a;
 
 $primary: $black;
 $secondary: $gray;
 $highlight: #7a3292;
+$highlight-75: #7a3292BF;
+$highlight-50: #7a32927F;
+$highlight-dark: #572066;
 $main-background: $white;
 
 $default-box-shadow: 0 .25rem 1rem -.25rem rgba(44, 44, 44, 0.17);

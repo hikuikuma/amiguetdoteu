@@ -6,6 +6,9 @@ html, body {
   padding: 0;
   width: 100%;
   height: calc(100% - variables.$wp-admin-bar);
+  @media (max-width: variables.$break-tablet) {
+    height: calc(100% - variables.$wp-admin-bar - 100px);
+  }
 }
 
 .site-width-content {
