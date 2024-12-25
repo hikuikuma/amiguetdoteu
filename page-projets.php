@@ -12,15 +12,15 @@ $projets = new WP_Query([
 	<main class="site-content site-width-content">
 		<h1>De beaux projets</h1>
         <div class="projects-list__filters">
-            Filtrer par expertise :
-	        <?php $terms = get_terms(['taxonomy' =>"expertise", 'hide_empty' => false]);
+            <span class="projects-list__filters__label">Filtrer par expertise :</span>
+	        <span class="projects-list__filters__buttons"><?php $terms = get_terms(['taxonomy' =>"expertise", 'hide_empty' => false]);
             for($i = 0; $i < count($terms); $i++) {
                 $term_name = $terms[$i]->name;
                 $term_slug = $terms[$i]->slug;
                 $ajax_url = admin_url( 'admin-ajax.php' );
                 $nonce = wp_create_nonce("amiguetdoteu_filter_projects");
 	            echo sprintf('<button class="tag__filter" data-url="%s" data-action="amiguetdoteu_filter_projects" data-nonce="%s" data-filter="%s" data-paging="%u">%s</button>', $ajax_url, $nonce, $term_slug, $paging, $term_name);
-            } ?>
+            } ?></span>
         </div>
         <div class="projects-list__items">
 	        <?php if($projets->have_posts()) {

@@ -30,6 +30,9 @@ h1:not(.hero-header__titre) {
     margin: 0 -2.5rem 2.5rem;
     border-radius: 0;
   }
+  @media (max-width: variables.$break-mobile) {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {

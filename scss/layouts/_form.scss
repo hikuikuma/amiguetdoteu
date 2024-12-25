@@ -7,6 +7,9 @@
     width: 100%;
     gap: 1rem 0;
     margin: 2rem 0;
+    @media (max-width: variables.$break-tablet) {
+      flex-direction: column;
+    }
 
     &-fieldset {
       margin: 0 .25rem;
@@ -14,6 +17,9 @@
       width: calc(50% - .5rem);
       box-sizing: border-box;
       border: 1px solid variables.$light-gray;
+      @media (max-width: variables.$break-tablet) {
+        width: 100%;
+      }
 
       &-legend {
         text-transform: uppercase;

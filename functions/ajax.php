@@ -25,8 +25,8 @@ function amiguetdoteu_filter_projects() {
 		$ajaxposts = new WP_Query([
 			'post_type' => 'projet',
 			'posts_per_page' => $paging,
-			'order_by' => 'id',
-			'order' => 'asc'
+			'order_by' => 'date',
+			'order' => 'desc'
 		]);
 	} else {
 		$ajaxposts = new WP_Query([
@@ -39,8 +39,8 @@ function amiguetdoteu_filter_projects() {
 					'terms' => $filter
 				]
 			],
-			'order_by' => 'id',
-			'order' => 'asc'
+			'order_by' => 'date',
+			'order' => 'desc'
 		]);
 	}
 	$response = '';
