@@ -9,6 +9,15 @@
       flex-direction: column;
       gap: .5rem 0;
     }
+    &__buttons {
+      display: flex;
+      @media (max-width: variables.$break-mobile) {
+        justify-content: center;
+        gap: 0.25rem 0;
+      }
+=======
+>>>>>>> origin/main
+    }
   }
   &__items {
     display: flex;
@@ -70,6 +79,11 @@
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+    @media (max-width: variables.$break-mobile) {
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
   }
   &:hover {
     & .project-card__infos {

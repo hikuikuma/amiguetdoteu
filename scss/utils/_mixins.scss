@@ -1,3 +1,5 @@
+@use "./variables";
+
 @mixin load-dot($delay) {
   animation-name: load-dot;
   animation-duration: 4s;
@@ -18,5 +20,27 @@
 
   100% {
     aspect-ratio: 1 / 1;
+  }
+}
+
+@mixin load-header {
+  animation-name: load-header;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+@keyframes load-header {
+  0% {
+    top: -100px;
+  }
+
+  50% {
+    top: -100px;
+  }
+
+  100% {
+    top: variables.$wp-admin-bar;
   }
 }

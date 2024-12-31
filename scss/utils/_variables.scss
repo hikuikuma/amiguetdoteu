@@ -20,7 +20,7 @@ $main-background: $white;
 $default-box-shadow: 0 .25rem 1rem -.25rem rgba(44, 44, 44, 0.17);
 $thumbnail-box-shadow: 0 0 1rem 0 rgba(44, 44, 44, 0.17);
 
-$wp-admin-bar: var(--wp-admin--admin-bar--height, '0px');
+$wp-admin-bar: var(--wp-admin--admin-bar--height, 0px);
 
 $site-margin: auto;
 

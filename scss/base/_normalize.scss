@@ -14,10 +14,20 @@ html, body {
 }
 
 .site-content {
+  display: block;
   padding: 0 2.5rem;
   box-sizing: border-box;
+  min-height: calc(100vh - 213px - 6rem);
   @media (max-width: variables.$break-tablet) {
     padding-top: 100px;
+  }
+  &-frontpage {
+    min-height: calc( calc(100vh - 213px - 6rem) - calc(min(1400px + 5rem, 100%) / 21 * 9) ) !important;
+    @media (max-width: variables.$break-tablet) {
+      min-height: calc( calc(100vh - 163px - 3rem) - calc(min(1400px + 5rem, 100%) / 21 * 9) ) !important;
+    }
+=======
+>>>>>>> origin/main
   }
 }
 

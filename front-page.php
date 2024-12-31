@@ -7,7 +7,7 @@
     <video src="<?= get_template_directory_uri().'/assets/video/heroheader_251224.webm'; ?>" class="hero-header__video" autoplay loop muted></video>
 </div>
 
-<main class="site-content site-width-content">
+<main class="site-content site-width-content site-content-frontpage">
     <?php
         if (have_posts()) {
             while (have_posts()) {

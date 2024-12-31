@@ -1,4 +1,5 @@
 @use "../utils/typography";
+@use "../utils/mixins";
 @use "../utils/variables";
 
 .site-pre-header {
@@ -17,13 +18,16 @@
 
 .site-header {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: variables.$site-width;
   margin: 0 variables.$site-margin -50px;
   box-shadow: variables.$default-box-shadow;
   background-color: variables.$white;
   border-radius: 0.5rem;
   z-index: 100;
-  transition: width ease 0.2s, border-radius ease 0.2s;
+  transition: all ease 0.2s;
+  box-sizing: border-box;
   @media (max-width: variables.$break-tablet) {
     position: fixed;
     top: variables.$wp-admin-bar;
@@ -36,7 +40,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2.5rem;
-    margin: 0 auto;
     width: 100%;
     max-width: variables.$site-width;
     box-sizing: border-box;
@@ -58,6 +61,12 @@
     top: variables.$wp-admin-bar;
     width: 100%;
     border-radius: 0;
+    @media (min-width: variables.$break-tablet) {
+      @include mixins.load-header;
+    }
+    @media (max-width: variables.$break-mobile) {
+      top: 0 !important;
+    }
   }
 }
 

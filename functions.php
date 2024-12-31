@@ -20,7 +20,8 @@ function amiguetdoteu_init() {
 function amiguetdoteu_enqueue_scripts() {
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', '', '20241107');
     wp_enqueue_style('amiguetdoteu', get_template_directory_uri().'/style.css', 'google-fonts', time());
-	wp_enqueue_script('filters-scripts', get_template_directory_uri().'/js/filters.js', array('jquery'), '20241117', true);
+	wp_enqueue_script('filters-scripts', get_template_directory_uri().'/js/filters.js', array('jquery'), '20241230', true);
+	wp_enqueue_script('visuals-scripts', get_template_directory_uri().'/js/visuals.js', array('jquery'), '20241230', true);
 }
 
 add_action('init', 'amiguetdoteu_init');
