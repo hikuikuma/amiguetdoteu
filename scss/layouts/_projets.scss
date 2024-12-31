@@ -11,12 +11,11 @@
     }
     &__buttons {
       display: flex;
+      flex-wrap: wrap;
       @media (max-width: variables.$break-mobile) {
         justify-content: center;
         gap: 0.25rem 0;
       }
-=======
->>>>>>> origin/main
     }
   }
   &__items {
@@ -46,6 +45,9 @@
 
   @media (max-width: variables.$break-tablet) {
     width: 100%;
+  }
+  @media (max-width: variables.$break-mobile) {
+    aspect-ratio: auto;
   }
 
   &__link {

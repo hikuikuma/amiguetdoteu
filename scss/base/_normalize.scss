@@ -26,8 +26,6 @@ html, body {
     @media (max-width: variables.$break-tablet) {
       min-height: calc( calc(100vh - 163px - 3rem) - calc(min(1400px + 5rem, 100%) / 21 * 9) ) !important;
     }
-=======
->>>>>>> origin/main
   }
 }
 
