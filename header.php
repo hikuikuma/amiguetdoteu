@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 <div class="site-pre-header">
-    <a href="<?= site_url().'/contact'; ?>" class="cta small">Contact</a>
+    <a href="<?= site_url().'/contact'; ?>" class="small">Contact</a>
 </div>
 <header class="site-header">
     <div class="site-header__content">

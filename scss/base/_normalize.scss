@@ -17,7 +17,7 @@ html, body {
   padding: 0 2.5rem;
   box-sizing: border-box;
   @media (max-width: variables.$break-tablet) {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 
@@ -60,4 +60,13 @@ html, body {
   &.loading {
     visibility: visible;
   }
+}
+
+.flexbox-2 {
+  gap: 1rem 2rem;
+}
+
+.wp-element-caption {
+  text-align: center;
+  font-size: .75rem;
 }

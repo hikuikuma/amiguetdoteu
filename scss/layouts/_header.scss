@@ -11,10 +11,7 @@
   box-sizing: border-box;
   text-align: right;
   @media (max-width: variables.$break-tablet) {
-    position: fixed;
-    top: variables.$wp-admin-bar;
-    padding: 0 2.5rem;
-    z-index: 150;
+    display: none;
   }
 }
 
@@ -88,6 +85,9 @@
     font: 700 1.875rem/30px typography.$urbanist;
     align-self: flex-start;
     grid-area: title;
+    @media (max-width: variables.$break-mobile) {
+      display: none;
+    }
   }
   &__description {
     font: 700 typography.$tiny-text-size typography.$urbanist;
@@ -95,5 +95,14 @@
     text-transform: uppercase;
     align-self: flex-end;
     grid-area: description;
+    @media (max-width: variables.$break-mobile) {
+      display: none;
+    }
+  }
+
+  @media (max-width: variables.$break-mobile) {
+    grid-template-columns: 40px;
+    grid-template-rows: 60px;
+    grid-template-areas: "logo";
   }
 }
