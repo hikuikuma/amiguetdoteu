@@ -28,6 +28,79 @@
 }
 
 .navbar {
+  display: flex;
   line-height: 40px;
   margin: auto 0;
+
+  &__burger {
+    position: relative;
+    display: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 27px;
+    min-height: 40px;
+    cursor: pointer;
+    visibility: collapse;
+
+    @media (max-width: variables.$break-mobile) {
+      display: block;
+      visibility: visible;
+    }
+
+    &__line {
+      position: absolute;
+      top: calc(50% - 0.055rem);
+      display: block;
+      width: 27px;
+      height: 0.11rem;
+      background-color: variables.$black;
+      transition: all 0.2s ease-in-out;
+
+      &:first-of-type {
+        transform: translate3d(0, -7px, 0);
+      }
+      &:last-of-type {
+        transform: translate3d(0, 7px, 0);
+      }
+      .active & {
+        &:first-of-type {
+          transform: translate3d(0, 0, 0) rotate(45deg);
+        }
+        &:nth-of-type(0n+2) {
+          opacity: 0;
+        }
+        &:last-of-type {
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &-menu {
+    @media (max-width: variables.$break-mobile) {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: calc(100px + variables.$wp-admin-bar);
+      height: calc(100vh - 100px - variables.$wp-admin-bar);
+      width: 100%;
+      padding: 2rem 0;
+      background-color: variables.$highlight;
+      color: variables.$white;
+      flex-direction: column;
+      gap: 2rem 0;
+      visibility: hidden;
+      box-sizing: border-box;
+      &>li {
+        text-align: center;
+        font-size: 2rem;
+      }
+      &.active {
+        display: flex;
+        visibility: visible;
+      }
+    }
+  }
 }

@@ -20,6 +20,13 @@
             <span class="site-identity__description"><?= get_bloginfo('description'); ?></span>
         </a>
 
-        <?php wp_nav_menu( array( 'container' => 'nav', 'container_class' => 'navbar', 'container_aria_label' => 'Navigation', 'theme_location' => 'header-navbar' ) ); ?>
+        <nav class="navbar" aria-label="Navigation">
+            <div class="navbar__burger">
+                <span class="navbar__burger__line"></span>
+                <span class="navbar__burger__line"></span>
+                <span class="navbar__burger__line"></span>
+            </div>
+	        <?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'header-navbar', 'menu_id' => 'main-menu', 'menu_class' => 'menu navbar-menu' ) ); ?>
+        </nav>
     </div>
 </header>

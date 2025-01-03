@@ -1,6 +1,12 @@
 (function ($) {
     // Display mail adress only with JS
     $('.privateMail').html('<a href="mailto:lionel@amiguet.eu">lionel@amiguet.eu</a>')
+
+    // Burger menu
+    $('.navbar__burger').on('click', function (e) {
+        $(this).toggleClass('active');
+        $('#main-menu').toggleClass('active');
+    })
 })(jQuery)
 
 document.addEventListener('scroll', () => {
