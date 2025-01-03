@@ -40,6 +40,9 @@ h2 {
   font-weight: bold;
   font-style: italic;
   margin: 3rem 0 2rem;
+  @media (max-width: variables.$break-mobile) {
+    font-size: 1.8rem;
+  }
   &.smaller {
     font-size: 1.25rem;
     margin: 0.75rem 0 0.5rem;
