@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero-header">
+<div class="hero-header" role="presentation">
     <div class="hero-header__filter">
         <h1 class="hero-header__titre">Créations numériques</h1>
     </div>

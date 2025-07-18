@@ -1,4 +1,4 @@
-<div class="load-screen">
+<div class="load-screen" role="figure" aria-label="Chargement de la page">
     <div class="load-screen__loader">
         <div class="load-screen__dot dot1"></div>
         <div class="load-screen__dot dot2"></div>
@@ -11,18 +11,18 @@
     </div>
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
     <div class="site-footer__grid">
         <div class="site-footer__infos">
-            <h2 class="smaller">Lionel Amiguet</h2>
-            <p>Développeur Wordpress et créateur numérique</p>
+            <h2 class="smaller" aria-label="Nom du site">Lionel Amiguet</h2>
+            <p aria-label="Définition de ce que fait Lionel Amiguet">Développeur Wordpress et créateur numérique</p>
         </div>
-        <div class="site-footer__nav-projects">
-            <h2 class="menu-title smaller">Contributions</h2>
+        <div class="site-footer__nav-projects" role="menu" aria-labelledby="menu-footer-contributions">
+            <h2 id="menu-footer-contributions" class="menu-title smaller">Contributions</h2>
             <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer', 'container' => false, 'theme_location' => 'footer-open' ) ); ?>
         </div>
-        <div class="site-footer__nav-contact">
-            <h2 class="menu-title smaller">Réseautage</h2>
+        <div class="site-footer__nav-contact" role="menu" aria-labelledby="menu-footer-social">
+            <h2 id="menu-footer-social" class="menu-title smaller">Réseautage</h2>
 	        <?php wp_nav_menu( array( 'menu_class' => 'menu menu-footer', 'container' => false, 'theme_location' => 'footer-social' ) ); ?>
         </div>
         <div class="site-footer__legal">
